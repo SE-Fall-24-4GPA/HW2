@@ -4,6 +4,8 @@ import trace
 
 def merge_sort(arr):
     """Defines the merge sort function and splits the array in two parts recursively"""
+    if (arr == []):
+        return arr
     if (len(arr) == 1):
         return arr
     half = len(arr)//2
@@ -29,6 +31,6 @@ def recombine(left_arr, right_arr):
 
 
 inp_arr = rand.random_array([None] * 20)
-arr_out = merge_sort(inp_arr)
+arr_out = merge_sort([inp_arr])
 
 print(arr_out)
