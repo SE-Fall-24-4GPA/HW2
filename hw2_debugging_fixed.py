@@ -2,13 +2,14 @@
 import rand
 import trace
 
+
 def merge_sort(arr):
     """Defines the merge sort function and splits the array in two parts recursively"""
     if (arr == []):
         return arr
     if (len(arr) == 1):
         return arr
-    half = len(arr)//2
+    half = len(arr) // 2
     return recombine(merge_sort(arr[:half]), merge_sort(arr[half:]))
 
 
