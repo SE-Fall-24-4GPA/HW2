@@ -27,14 +27,7 @@ jobs:
     - name: Run pyflakes and save trace
       run: pyflakes . > post_traces/pyflakes_trace.txt 2>&1 || true
     - name: Upload trace files
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       with:
         name: post-traces
         path: post_traces
-    - name: Commit changes
-      run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        git add post_traces
-        git commit -am "Apply autopep8 formatting and add tool traces" || echo "No changes to commit"
-        git push
