@@ -1,6 +1,6 @@
 """imports"""
-import rand
 import trace
+import rand
 
 
 def merge_sort(arr):
