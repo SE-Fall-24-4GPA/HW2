@@ -1,4 +1,6 @@
 """imports"""
+# pylint: disable=W0611
+# using the above statement to suppress warnings related to importing rand
 import trace
 import rand
 
