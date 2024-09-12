@@ -26,8 +26,3 @@ jobs:
       run: pylint $(git ls-files '*.py') > post_traces/pylint_trace.txt 2>&1 || true
     - name: Run pyflakes and save trace
       run: pyflakes . > post_traces/pyflakes_trace.txt 2>&1 || true
-    - name: Upload trace files
-      uses: actions/upload-artifact@v4
-      with:
-        name: post-traces
-        path: post_traces
